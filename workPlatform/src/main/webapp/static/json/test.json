@@ -1,0 +1,40 @@
+[
+    {
+        "stageId": "100",
+        "stageName": "未开始",
+        "taskList": [{"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是一般任务","isComplete":false},
+        {"taskId":"500","taskLevel":"1","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是重要任务","isComplete":false},
+        {"taskId":"500","taskLevel":"2","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是紧急任务","isComplete":false},
+        {"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是内容一","isComplete":false}],
+        "taskDoneList": [{"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是一般任务","isComplete":true},
+        {"taskId":"500","taskLevel":"1","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是重要任务","isComplete":true},
+        {"taskId":"500","taskLevel":"2","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是紧急任务","isComplete":true},
+        {"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是内容一","isComplete":true},
+        {"taskId":"500","taskLevel":"2","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是紧急任务","isComplete":true},
+        {"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是内容一","isComplete":true}]
+    },
+    {
+        "stageId": "101",
+        "stageName": "正在进行",
+        "taskList": [{"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是一般任务","isComplete":false},
+        {"taskId":"500","taskLevel":"1","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是重要任务","isComplete":false},
+        {"taskId":"500","taskLevel":"2","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是紧急任务","isComplete":false},
+        {"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是内容一","isComplete":false}],
+        "taskDoneList": [{"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是一般任务","isComplete":true},
+        {"taskId":"500","taskLevel":"1","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是重要任务","isComplete":true},
+        {"taskId":"500","taskLevel":"2","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是紧急任务","isComplete":true},
+        {"taskId":"500","taskLevel":"0","headPic":"/workPlatform/static/images/head-pic.jpg","taskContent":"我是内容一","isComplete":true}]
+    },
+    {
+        "stageId": "102",
+        "stageName": "验证中",
+        "taskList": [],
+        "taskDoneList": []
+    },
+    {
+        "stageId": "103",
+        "stageName": "结束",
+        "taskList": [],
+        "taskDoneList": []
+    }
+]

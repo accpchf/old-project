@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:flex="http://www.springframework.org/schema/flex" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/flex http://www.springframework.org/schema/flex/spring-flex-1.5.xsd">
+
+	<!-- 扫描com.zdksii.pms.wp.controller包下的@Controller标注的类 -->
+	<context:component-scan base-package="com.zdksii.pms.wp.controller" />
+
+	<!-- 启动注解驱动的Spring MVC功能，注册请求url和注解POJO类方法的映射 -->
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+	        <bean class="com.zdksii.pms.common.hibernate.MappingJackson2HttpMessageConverter">
+	            <property name="objectMapper">
+	                <bean class="com.zdksii.pms.common.hibernate.HibernateAwareObjectMapper" />
+	            </property>
+	        </bean>
+	    </mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- 对模型视图名称的解析，在请求时模型视图名称添加前后缀 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/resource/jsp/" p:suffix=".jsp" />
+
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename">
+            <value>properties/common/common</value>
+        </property>
+    </bean> 
+    
+	<bean
+		class="com.zdksii.pms.common.exception.CustomSimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">error/exceptionPage</prop>
+				<prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">maxUploadExceeded</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver" > 
+		 <property name="defaultEncoding"  value="utf-8"/>
+		  <!--1024*1024*20 =20971520 20M-->  
+		<!--  <property name="maxUploadSize"  value="20971520"/> -->
+		 <!--  Set the maximum allowed size (in bytes) before uploads are written to disk.    -->
+		 <property name="maxInMemorySize" value="4096"/>  
+	</bean> 
+
+    <!-- 和springmvc集成，在controller 开启权限注解  ，必须被springmvc 配置文件import-->
+     <!--  <import resource="spring-servlet-shiro.xml" /> --> 
+	<bean id="pathUtil" class="com.zdksii.pms.common.util.PathUtil" />	
+	<bean id="springContextUtil" class="com.zdksii.pms.common.util.SpringContextUtil" /> 
+	<bean id="cacheUtil" class="com.zdksii.pms.common.ehcache.CacheUtil" /> 
+</beans>

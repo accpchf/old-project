@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+  <div id="logoPic" class="logo pull-left"></div>
+    <div class="right-function  pull-right">
+      <ul>
+          <li ><a href="#" id="createObj"><i class=" icon-plus"></i>新建</a></li>
+            <li><a href="#" id="personaInfo"><img src="../../images/head-portraits.png" />moonstar<i class="icon-down-dir"></i></a></li>
+        </ul>        
+    </div> 
+</div>
+<div data-id="organizationTemplate" class="organize-setting">
+  <nav>
+      <div class="organize-logo pull-left">
+          <img src="../../images/pic-project2.jpg"  class="img-circle"/>
+            <h4>浙江大学 <br /><span>昆山创新中心</span></h4>  
+        </div>  
+        <div class="wrap">
+          <ul id="organizationMenu" class="nav nav-pills">
+               <li id="person"><a href="#">成员</a></li>
+               <li id="team"><a href="#">团队</a></li>
+               <li id="statistics"><a href="#">统计</a></li>
+               <li id="set"><a href="#">设置</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="wrap organization-common" id="organizationContainer"></div>
+</div>
+<script type="text/javascript" src="../../plugins/require/require.js" data-main="../../script/framework/main.js" ></script>
+</body>
+</html>

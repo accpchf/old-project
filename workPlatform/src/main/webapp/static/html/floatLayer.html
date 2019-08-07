@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../css/font-icon.css">
+<link href="../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<!--版本菜单 -->
+<div class="layer-lg boardBackground floatLayer " style="padding:5px 2px">
+    <div class="panel-group fold-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        版本1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul>
+                        <li ><a>列表名称</a></li>
+                        <li><a>列表名称</a><i class=" icon-ok"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        版本2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li ><a>列表名称</a></li>
+                        <li><a>列表名称</a><i class=" icon-ok"></i></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        版本3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li ><a>列表名称</a></li>
+                        <li><a>列表名称</a><i class=" icon-ok"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!--个人设置 -->
+	<div class="layer-sm boardBackground floatLayer">
+    	<ul>
+            <li><a>我的任务</a></li>
+            <li><a>个人设置</a></li>
+            <li><a>我的消息</a></li>
+            <li><a>帮助中心</a></li>
+            <li class="border-line"><a>退出登录</a></li>
+        </ul>
+    </div>
+    <!--阶段菜单 -->
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>阶段菜单</h5>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li><a> <i class=" icon-pencil"></i>编辑阶段</a></li>
+            <li><a> <i class=" icon-plus"></i>在此后添加新阶段</a></li>
+            <li><a> <i class="icon-trash"></i>删除阶段</a></li>
+            <li><a> <i class="icon-squares"></i>切换至自由模式</a></li>
+        </ul>
+    </div>
+    <!--选择项目 -->
+    <div class="layer-big boardBackground floatLayer project-img vertical-scroll-min">
+    	<ul>
+            <li><input class=" form-control" type="text" placeholder="查找项目"> </li>
+            <li class="title-line">常用项目</li>
+            <li><img src="../images/pic-project.jpg" /><a>项目名称</a><i class=" icon-ok"></i></li>
+            <li class="title-line">个人项目</li>
+            <li><img src="../images/pic-project.jpg" /><a>项目名称</a></li>
+            <li class="title-line">团队项目</li>
+            <li><img src="../images/pic-project.jpg" /><a>项目名称</a></li>
+        </ul>
+    </div>
+    <!--创建项目 -->
+    <div class="layer-lg boardBackground floatLayer ">
+    	<ul>
+            <li><h6>创建项目</h6><p>每个项目都有任务板、文件库和日程表等功能。</p></li>
+            <li  class="border-line"><h6>创建组织</h6><p>组织是项目和人的集合，可以用来管理你的公司、团队。</p></li>
+        </ul>
+    </div>
+    
+    <!--团队菜单 -->
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>团队菜单</h5>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li><a> <i class=" icon-pencil"></i>编辑团队名称</a></li>
+            <li><a> <i class="icon-user-outline"></i>退出团队</a></li>
+            <li><a> <i class="icon-trash"></i>删除团队</a></li>
+        </ul>
+    </div>
+    
+    <!--团队菜单 -->
+    
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>编辑团队名称</h5>
+            <i class=" icon-left-open-big"></i>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li><input class=" form-control" type="text" placeholder="asdddadss"></li>
+            <li><button class="btn green btn-common">保存</button></li>
+        </ul>
+    </div>
+    
+    
+    
+     <!--退出团队 -->
+    
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>退出团队</h5>
+            <i class=" icon-left-open-big"></i>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li>你确定要退出这个团队吗？</li>
+            <li><button class="btn red btn-common">退出</button></li>
+        </ul>
+    </div>
+    
+       
+     <!--删除团队 -->
+    
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>删除团队</h5>
+            <i class=" icon-left-open-big"></i>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li>你确定要删除这个团队吗？</li>
+            <li><button class="btn red btn-common">删除</button></li>
+        </ul>
+    </div> 
+    
+     <!--创建组织 -->
+    
+    <div class="layer-windows boardBackground form-setting">
+        <div class="layer-title">
+        	<h5>创建组织</h5>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li><label>组织名称</label><input class=" form-control" type="text" data-type="name" value="浙江大学"></li>
+            <li><label>组织描述</label><textarea class=" form-control" type="text">昆山创新中心</textarea></li>
+            <li><label>联系人</label><input class=" form-control" type="text" data-type="name" value="浙江大学"></li>
+            <li><label>联系电话</label><input class=" form-control" type="text" data-type="name" value="浙江大学"></li>
+            <button class="btn green btn-common">确定</button>
+        </ul>
+    </div>  
+    
+    <!--查找成员 -->
+	<div class="layer-sm-noscroll boardBackground floatLayer little-portrait ">
+    	<div class="menu-input"><input class=" form-control" type="text" data-type="name" value="查找成员"></div>
+    	<ul class="vertical-scroll-min scroll-area">
+            <li><img src="../images/pic-shelters.png" class="img-circle"> 待认领</li>
+            <li><i class="icon-users-1"></i>所有成员</li>
+            <li><img src="../images/head-pic.jpg" class="img-circle"> moonstar<i class=" icon-ok"></i></li>
+            <li><img src="../images/head-pic.jpg" class="img-circle"> moonstar</li>
+            <li><i class="icon-users-1"></i>所有成员</li>
+            <li><img src="../images/head-pic.jpg" class="img-circle"> moonstar<i class=" icon-ok"></i></li>
+            <li><img src="../images/head-pic.jpg" class="img-circle"> moonstar</li>
+        </ul>
+    </div>  
+        <!--任务菜单 -->
+    <div class="layer-lg boardBackground floatLayer ">
+        <div class="layer-title">
+        	<h5>团队菜单</h5>
+            <i class="icon-cancel-circled-outline"></i>
+        </div>
+    	<ul>
+            <li><a> <i class="icon-popup "></i>复制任务</a></li>
+            <li><a> <i class="icon-export-1"></i>移动任务</a></li>
+            <li><a> <i class="icon-trash"></i>删除任务</a></li>
+        </ul>
+    </div>
+     <!--查找成员 -->
+	<div class="layer-xsm boardBackground floatLayer little-portrait">
+    	<ul>
+            <li><a><i class=" icon-record gray"></i>一般</a></li>
+            <li><a><i class=" icon-record yellow"></i>紧急</a><i class=" icon-ok"></i></li>
+            <li><a><i class=" icon-record red"></i>非常紧急</a></li>
+        </ul>
+    </div>  
+    <!--成员可权限见 --> 
+    <div class="layer-xsm boardBackground floatLayer little-portrait">
+    	<ul>
+            <li><a>所有成员可见</a><i class=" icon-ok"></i></li>
+            <li><a>仅参与者可见</a></li>
+        </ul>
+    </div>
+     <!--日期下拉 --> 
+       <div class="layer-xsm boardBackground floatLayer ">
+    	<ul>
+            <li><a>12.04~12.08</a></li>
+            <li><a>12.04~12.08</a><i class=" icon-ok"></i></li>
+            <li><a>12.04~12.08</a></li>
+        </ul>
+    </div>
+     
+    
+<script src="../plugins/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">    
+    $("#register").on("click",function(){
+        location.href="login.html";
+        return false;
+    });
+    $("#isCreateOrganize").on("click",function(){
+        if($(this).find("i").is(":hidden")){
+            $(this).find("i").show();
+            $("#organizeName").show();
+        }else{
+            $(this).find("i").hide();
+            $("#organizeName").hide();
+        }
+        return false;
+    })
+    
+</script>
+</body>
+</html>

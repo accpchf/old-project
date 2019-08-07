@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+<link href="../../plugins/jquery-ui/jquery-ui-1.10.4.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+  <div id="logoPic" class="logo pull-left"></div>
+    <div id="switchingProject" class="main-menue pull-left corner-6 project-select">
+      <i class="icon-inbox"></i><a>project name<i class=" icon-down-open-big"></i></a>
+    </div>
+
+    <div class="right-function  pull-right">
+      <ul>
+        <li ><a href="#" id="createObj"><i class=" icon-plus"></i>新建</a></li>
+          <li><a href="#" id="personaInfo"><img src="../../images/head-portraits.png" />moonstar<i class="icon-down-dir"></i></a></li>
+      </ul>    
+    </div>
+</div>
+<div id="menuItems" class="left-menue ">
+    <ul>   
+       <li><a id="taskBoard"><i class="icon-tasks"></i><i class="right-arrow"></i>任务板</a></li>
+       <li><a id="fileLibrary"><i class=" icon-folder"></i><i class="right-arrow" style="display:none"></i>文件库</a>  </li>
+       <li><a id="dynamic"><i class="icon-back-in-time"></i><i class="right-arrow" style="display:none"></i>动态</a></li>
+       <li><a id="weekly"><i class="icon-clipboard-1"></i><i class="right-arrow" style="display:none"></i>周报</a></li>
+       <li><a id="meetting"><i class=" icon-mic"></i>会议<i class="right-arrow" style="display:none"></i></a></li>
+    </ul>
+</div>
+<div data-id="projectTemplate" class="main-content">
+     
+</div>
+<script type="text/javascript" src="../../plugins/require/require.js" data-main="../../script/framework/main.js" ></script>
+</body>
+</html>

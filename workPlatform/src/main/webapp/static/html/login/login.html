@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+	<div class="logo pull-left"></div>
+
+    <div class="right-function  pull-right">
+    	<ul>
+            <li><a href="../login/register.html"><i class="icon-key"></i>注册</a></li>
+        </ul>
+    	
+        
+    </div>
+</div>
+<div class="popup-content-wrapper">
+	<div class="popup-content login">
+		<form>
+        	<input class="form-control user" placeholder="邮箱"  type="text" />
+            <input class="form-control code" placeholder="密码"  type="password"/>
+            <button class="btn green btn-common"  id="login">登录</button>
+            <!-- <a class="pull-left">忘记密码？</a> -->
+            <a class="pull-right green" href="../../html/login/register.html">注册</a>
+
+        </form>
+	</div>
+
+
+</div>
+
+<script src="../../plugins/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">  
+    $("#login").on("click",function(){
+        location.href="../index/index.html";
+        return false;
+    })
+</script>
+
+</body>
+</html>

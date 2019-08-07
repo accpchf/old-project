@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="project vertical-scroll">
+
+<div class="main-content">
+    
+    <div class="home-body-wrap "  >
+        <div class="dynamic-content ">
+            <div class="weekly-tab">
+            	<ul class="nav nav-tabs ">
+                   <li ><a href="#">成员周报</a></li>
+                   <li class="active"><a href="#">项目周报</a></li>
+                </ul>
+            </div>
+            <div class="layout-left weekly-top " >
+            	<div class="time-bg">
+                    <div class="layer-group open-layer layer-inblock" >
+                    <a>12.01 ~ 12.31<i class=" icon-down-dir"></i></a>
+                    <ul class="boardBackground   space-item2  floatLayer vertical-scroll-min">
+                       <li><a>12.15-12.19</a> <i class=" icon-ok"></i>  </li>
+                       <li><a>12.15-12.19</a></li>
+                       <li><a>12.15-12.19</a></li>
+                    </ul>
+                 </div>
+                </div>
+                <ul class="weekly-item">
+                	<li class="select"><a><i class=" icon-calendar"></i>12.15-12.19</a></li>
+                    <li><a><i class="icon-calendar"></i>12.08-12.12</a></li>
+                    <li><a><i class="icon-calendar"></i>12.01-12.05</a></li>
+                     <li><a><i class=" icon-calendar"></i>11.24-11.28</a></li>
+                </ul>
+            
+            </div>
+        	<div class="layout-right  weekly weekly-top weekly-program vertical-scroll" >
+            	<div class="title">
+                    <h4></h4>
+                </div>
+                <div class="time-block corner-3">
+                    <div class="layer-top task-infor ">
+                        <h5>企业工作平台-协同办公</h5>
+                    </div>
+                    <div class="task-infor task-detail little-portrait">
+                        <ul>
+                            <li><label>项目状态</label><br /><a class="width-change"></i><i class=" icon-record green"></i><input value="正常" class="form-control input-width" ></a></li>
+                            <li><label>交付日期</label><br /><a class="mouse-shape"><i class="icon-calendar"></i>2014-10-12</a></li>
+                             <li><label>项目阶段</label><br /><a class="width-change"></i><i class=" icon-record green"></i><input value="启动" class="form-control input-width" ></a></li>
+                              <li><label>项目进度（%）</label><br /> 50%</li>
+                             <li><label>填写人</label><br /><a class="mouse-shape"><img src="../../images/head-pic2.jpg" class="img-circle">  moonstar</a></li>
+                            <li><label>填写日期</label><br /><a class="mouse-shape"><i class="icon-calendar"></i>2014-10-12</a></li>
+                        </ul>
+                     </div>
+                        <div class="task-infor add-message little-portrait">
+                             <label>项目成员</label><br>
+                              <ul>
+                                <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                <li><i class="icon-plus-circle icon-big"></i></li>
+                             </ul>
+                        </div>
+                     <div class="week-block">
+                        <h1>上周工作情况</h1>
+                     	<div class="task-infor add-message  little-portrait">
+                         <label>上周风险或问题</label> 
+                         <table class=" table">
+                			<tr><th>问题描述</th><th>解决方案</th><th>责任人</th></tr>
+                            <tr>
+                                <td><input value="技术难度" class="transparency" disabled="disabled"></td><td><input value="合理方案" class="transparency" disabled="disabled"></td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                                      
+                        </table>     
+                     </div>
+                     <div class="task-infor add-message  little-portrait">
+                         <label>上周工作</label> 
+                         <table class=" table">
+                			<tr><th>编号</th><th>工作内容</th><th width="10%">计划进度（%）</th><th width="10%">完成情况（%）</th><th>责任人</th></tr>
+                            <tr>
+                                <td>1</td><td><input value="评估旧的软件系统和新的软件系统" class="transparency form-control" disabled="disabled" ></td><td>100%</td><td>100%</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                                       <tr>
+                                <td>2</td><td>评估旧的软件系统和新的软件系统</td><td>100%</td><td>100%</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                        </table>     
+                     </div>
+                  </div>
+                  <div class="week-block">
+                      <h1>本周工作情况</h1>
+                      <div class="task-infor add-message  little-portrait">
+                         <label>本周风险或问题</label> <a class="green-link"><i class="icon-plus-circle"></i>添加问题</a> <button class=" btn btn-sm-outer">保存</button><br>
+                         <table class=" table">
+                			<tr><th>问题描述</th><th>解决方案</th><th>责任人</th></tr>
+                            <tr>
+                                <td>技术难度</td><td>合理方案</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                                      
+                        </table>     
+                     </div>  
+                      <div class="task-infor add-message  little-portrait">
+                         <label>本周工作</label> <a class="green-link"><i class="icon-plus-circle"></i>添加工作</a><br>
+                         <table class=" table">
+                			<tr><th>编号</th><th>工作内容</th><th width="10%">计划进度（%）</th><th width="10%">完成情况（%）</th><th>责任人</th></tr>
+                            <tr>
+                                <td>1</td><td>评估旧的软件系统和新的软件系统</td><td>100%</td><td>100%</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                                       <tr>
+                                <td>2</td><td>评估旧的软件系统和新的软件系统</td><td>100%</td><td>100%</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                        </table>     
+                     </div> 
+                      <div class="task-infor add-message  little-portrait  task-content">
+                         <label>本周工作总结</label>  
+                         <textarea class="form-control weekly-control">ssssssssssssssssss</textarea>
+                     </div>
+                  </div>  
+                  <div class="week-block">
+                      <h1>下周工作情况</h1> <i class=" icon-pencil"></i>
+                      <div class="task-infor add-message  little-portrait">
+                         <label>下周工作计划</label> <a class="green-link"><i class="icon-plus-circle"></i>添加计划</a><br>
+                         <table class=" table">
+                			<tr><th>编号</th><th>工作内容</th><th>责任人</th></tr>
+                            <tr>
+                                <td>1</td><td>评估技术方案</td><td>
+                                <ul>
+                                    <li><img src="../../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                                    <li><i class="icon-plus-circle icon-big"></i></li>
+                                 </ul>
+                                 </td>
+                             </tr>
+                                      
+                        </table>     
+                     </div>
+                  </div>             
+                </div>              
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+</body>
+</html>

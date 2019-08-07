@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	
+	<!-- shiro filter -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<!-- shiro的核心安全接口 -->
+		<property name="securityManager" ref="securityManager" />
+		<!-- 没有登录的用户在请求需要登录的页面时自动跳转到登录页面-->
+		<property name="loginUrl" value="/user/toLogin.htm" />  
+		<!-- 登录成功跳转的页面-->
+		 <property name="successUrl" value="/project/home.htm" /> 
+		<!-- 没有权限默认跳转的页面 -->
+		<property name="unauthorizedUrl" value="/login/unauthorized.htm" /> 
+		<property name="filters">
+		  <map>
+		  	<entry key="sperm" >
+		  		<bean class="com.zdksii.pms.common.shiro.MyOncePerShiroFilter" />
+		  	</entry> 
+<!-- 		  	<entry key="sperm2" >
+		  		<bean class="com.zdksii.pms.common.filter.PageEhCacheFilter" />
+		  	</entry>  -->
+		  </map>
+		</property>
+		<!-- shiro的连接约束 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/** =sperm
+				<!-- /user/login = authc -->
+				/login/**=authc
+				/org/**=authc
+				/project/**=authc
+				/filelibrary/**=authc
+				/meeting/**=authc
+				/personal/**=authc
+				/dynamic/**=authc
+				/task/**=authc
+				/team/**=authc
+				/weeklyReport/**=authc
+			</value>
+		</property>
+	</bean>
+
+	<bean id="wpRealm" class="com.zdksii.pms.common.shiro.BaseRealm" >
+		<property name="cachingEnabled" value="false"/>
+	</bean>
+
+ 	
+    <!-- <bean id="sessionManager" class="org.apache.shiro.session.mgt.DefaultSessionManager"> -->
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+    	<!--毫秒  10分钟-->
+		<property name="globalSessionTimeout" value="600000"/>
+		<property name="deleteInvalidSessions" value="true"/>
+		<property name="sessionValidationSchedulerEnabled" value="true"/>
+
+<!-- 		<property name="sessionValidationScheduler" ref="sessionValidationScheduler"/>
+		<property name="sessionDAO" ref="sessionDAO"/> -->
+	</bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="wpRealm" />
+	</bean>
+	
+	<!-- 相当于调用SecurityUtils.setSecurityManager(securityManager) -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager"/>
+        <property name="arguments" ref="securityManager"/>
+    </bean>
+    
+    <!--以下为了开启shiro 注解  -->	
+ 	<!-- Shiro生命周期处理器 -->
+ 	<!--  <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>  -->
+<!--     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/> 
+ 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
+		<property name="proxyTargetClass" value="true" />
+	</bean> -->
+
+</beans>
+  

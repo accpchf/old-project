@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+			http://www.springframework.org/schema/cache 
+     		http://www.springframework.org/schema/cache/spring-cache.xsd">
+   
+	<!-- 扫描com.zdksii.pms.wp.service.impl包下的@Service标注的类 -->
+	<context:component-scan base-package="com.zdksii.pms.wp.service.impl" />
+
+		<!-- 配置eh缓存管理器 -->
+		 <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">    
+        	<property name="configLocation"  value="classpath:spring/spring-ehcache.xml"/> 
+        </bean>
+		<!-- 配置一个简单的缓存工厂bean对象 -->
+		<bean id="SimplePageCachingFilter" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+   		 	<property name="cacheManager" ref="cacheManagerFactory" />
+    		<!-- 使用缓存 关联ehcache.xml中的缓存配置 -->
+    		<property name="cacheName" value="SimplePageCachingFilter" /> 
+		</bean>
+		
+		<bean id="mobileSessionCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+   		 	<property name="cacheManager" ref="cacheManagerFactory" />
+    		<!-- 使用缓存 关联ehcache.xml中的缓存配置 -->
+    		<property name="cacheName" value="mobileSessionCache" /> 
+		</bean>
+		
+    <!--  缓存  属性-->  
+<!--     <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">    
+        <property name="configLocation"  value="classpath:spring/spring-ehcache.xml"/>   
+    </bean>  -->  
+    <!-- 默认是cacheManager -->  
+    <!--  <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">    -->
+<!--      <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager"  ref="cacheManagerFactory"/>  
+        <property name="cacheName">  
+            <value>com.rmn190.MethodCache</value>  
+        </property>   
+    </bean>  -->  
+    
+    <!-- 支持缓存注解 -->  
+  <!--   <cache:annotation-driven cache-manager="cacheManager" />  -->
+    
+	<!-- 启用spring cache注解,默认使用cacheManager的缓存管理器 -->
+<!-- 	<cache:annotation-driven />
+	配置缓存管理器
+	<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+		<property name="caches">
+			<set>
+				<bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" p:name="productCache" />
+			</set>
+		</property>
+	</bean> -->
+
+	<!-- 配置业务数据源的事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" p:sessionFactory-ref="sessionFactory" />
+	<aop:config proxy-target-class="true">
+		<!-- 通过aop定义事务增强切面 -->
+		<aop:pointcut id="serviceMethod" expression="execution(* com.zdksii.pms.wp.service.*.*(..))" />
+		<!-- 引用事务增强 -->
+		<aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice" />
+	</aop:config>
+    
+	<!-- 事务增强 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<!-- 事务属性定义 -->
+		<tx:attributes>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Throwable" />
+			<tx:method name="search*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Throwable" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Throwable" />
+			<tx:method name="list*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Throwable" />
+			<tx:method name="is*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Throwable" />
+			<tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Throwable" />
+			<tx:method name="create*" propagation="REQUIRED" rollback-for="java.lang.Throwable" />
+			<tx:method name="delete*" propagation="REQUIRED" rollback-for="java.lang.Throwable" />
+			<tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Throwable" />
+			<tx:method name="send*" propagation="REQUIRED" rollback-for="java.lang.Throwable" />
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:aspectj-autoproxy proxy-target-class="false" />
+	<bean id="auditServiceAspectJ" class="com.zdksii.pms.wp.audit.AuditServiceAspectJ" />
+	<!-- <bean id="dataLog" class="com.zdksii.pms.common.aspectj.MethodDaoLogAspectJ" /> -->
+
+</beans>

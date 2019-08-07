@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+  <div id="logoPic" class="logo pull-left"></div>
+
+    <div class="right-function  pull-right">
+      <ul>
+          <li ><a href="#" id="createObj"><i class=" icon-plus"></i>新建</a></li>
+            <li><a href="#" id="personaInfo"><img src="../../images/head-portraits.png" />moonstar<i class="icon-down-dir"></i></a></li>
+        </ul> 
+    </div>
+</div>
+<div data-id="projectHomePage" class="main-content">
+  
+    <div  class="index-body-wrap">
+      <div class="main-project">
+        <ul>
+                <li><span>常用项目</span></li>
+                <li><a class="select"><i class="icon-inbox"></i> <span class="left-arrow-big"></span></a></li>
+                <li>
+                    <div class="project-bg corner-6">
+                          <div class="project-block common corner-6">
+                              <div class="operate"><em class="icon-pencil"></em><em class=" icon-star"></em></div>
+                              <i class="icon-inbox"></i>
+                              <h3>Projiect Name</h3>
+                              <div class="describe">
+                                工作进行中...
+                              </div>
+                          </div>   
+                           <div class="project-block common new-pic corner-6">
+                              <div class="operate"><em class="icon-pencil"></em><em class=" icon-star select"></em></div>
+                              <i class="icon-inbox"></i>
+                              <h3>Projiect Name</h3>
+                              <div class="describe">
+                                工作进行中...
+                              </div>
+                          </div>      
+                    </div>
+                </li>
+            </ul> 
+          <ul>
+                <li><span>个人项目</span></li>
+                <li><a class="select"><i class="icon-user"></i> <span class="left-arrow-big"></span></a></li>
+                <li>
+                    <div class="project-bg corner-6 process-more" style="padding-top:25px">
+                          <span class="project-state">进行中<i class="icon-down-open-big"></i></span>
+                          <div class="layer-xsm boardBackground floatLayer little-portrait project-state-larer">
+                                <ul>
+                                    <li>进行中</li>
+                                    <li>停止<i class=" icon-ok"></i></li>
+                                    <li>已完成</li>
+                                </ul>
+                            </div>
+                          <div class="project-block user corner-6">
+                              <i class="icon-user"></i>
+                              <h3>Projiect Name</h3>
+                              <div class="describe">
+                                工作进行中...
+                              </div>
+                          </div>   
+                         
+                    </div>
+                </li>
+            </ul> 
+              <ul>
+                <li><span>组织项目</span></li>
+                <li><a class="select"><i class="icon-users  users"></i> <span class="left-arrow-big"></span></a></li>
+                <li>
+                    <div class="project-bg corner-6 process-more">
+                          <h4 id="goOrganization">浙江大学昆山创新中心<em class=" icon-right-open-big"></em> </h4>
+                          <span class="project-state">进行中<i class="icon-down-open-big"></i></span>
+                          <div class="project-block teams corner-6">
+                              <i class="icon-users"></i>
+                              <h3>Projiect Name</h3>
+                              <div class="describe">
+                                    工作进行中...                            
+                              </div>     
+                          </div>  
+                                
+                  </div>
+                  
+                </li>
+            </ul>
+            <ul>
+                <li><span>组织项目</span></li>
+                <li><a class="select"><i class="icon-users  users"></i> <span class="left-arrow-big"></span></a></li>
+                <li>
+                    <div class="project-bg corner-6">
+                          <h4 id="goOrganization">浙江大学昆山创新中心<em class=" icon-right-open-big"></em> </h4>
+                          <div class="title">
+          	    	          <button class="btn green-word"> <em class=" icon-plus-1"></em>添加项目</button>
+                          </div>  
+                          
+                  </div>
+                  
+                </li>
+            </ul>
+        </div>
+        
+    </div> 
+</div>
+<script type="text/javascript" src="../../plugins/require/require.js" data-main="../../script/framework/main.js" ></script>
+</body>
+</html>

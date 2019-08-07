@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 数据访问层 -->
+	<import resource="spring-datasource.xml" />
+	<!-- 服务层配置 -->
+	<import resource="spring-service.xml" />
+	<!-- 安全验证框架 -->
+	<import resource="spring-shiro.xml" /> 
+	<!-- 定时任务 -->
+	<import resource="spring-scheduler.xml" />
+	<!-- 邮件 -->
+  	<import resource="spring-email.xml" />  
+</beans>

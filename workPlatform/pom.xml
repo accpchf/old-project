@@ -1,0 +1,521 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>workPlatform</groupId>
+	<artifactId>workPlatform</artifactId>
+	<version>v2.1.4</version>
+	<packaging>war</packaging>
+	<properties>
+		<org.springframework.version>3.1.2.RELEASE</org.springframework.version>
+		<org.apache.shiro.version>1.2.2</org.apache.shiro.version>
+		<!-- 高版本会影响hibernate 实体映射配置 -->
+		<fasterxml.jackson.version>2.3.2</fasterxml.jackson.version>
+		<org.codehaus.jackson.version>1.9.9</org.codehaus.jackson.version>
+		<jetty.version>7.6.9.v20130131</jetty.version>
+		<!-- <spring-data-mongodb.version>1.6.2.RELEASE</spring-data-mongodb.version> -->
+	</properties>
+	<dependencies>
+		<!-- Spring框架及其依赖jar包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Hibernate框架及其依赖jar包 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.1.3.Final</version>
+		</dependency>
+		<!-- Shiro框架及其依赖jar包 -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${org.apache.shiro.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${org.apache.shiro.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${org.apache.shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${org.apache.shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-quartz</artifactId>
+			<version>${org.apache.shiro.version}</version>
+		</dependency>
+
+		<!--测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>1.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 日志包开始 -->
+		<!-- <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> 
+			<version>1.2.17</version> </dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.10</version>
+		</dependency>
+		<!--log4jdbc -->
+		<dependency>
+			<groupId>com.googlecode.log4jdbc</groupId>
+			<artifactId>log4jdbc</artifactId>
+			<version>1.2</version>
+			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 日志包结束 -->
+
+		<!-- 工具包 开始 -->
+		<!-- apache commons包 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-io</artifactId>
+					<groupId>commons-io</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- <dependency> <groupId>commons-httpclient</groupId> <artifactId>commons-httpclient</artifactId> 
+			<version>3.0.1</version> </dependency> -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!--时间货币等工具包 -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<!-- 比BeanUtil更强大的包 -->
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.5.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-lang3</artifactId>
+					<groupId>org.apache.commons</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-beanutils</artifactId>
+					<groupId>commons-beanutils</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		<!-- freemarker模板 -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.22</version>
+		</dependency>
+		<!-- 解析excel 开始 -->
+		<dependency>
+			<groupId>net.sf.jxls</groupId>
+			<artifactId>jxls-reader</artifactId>
+			<version>1.0.6</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-beanutils</artifactId>
+					<groupId>commons-beanutils</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jxls</groupId>
+			<artifactId>jxls-core</artifactId>
+			<version>1.0.6</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-beanutils</artifactId>
+					<groupId>commons-beanutils</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<!-- 解析excel 结束 -->
+		<!-- ftp 工具包 -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<!-- 工具包 结束 -->
+
+		<!-- For JSON -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>${org.codehaus.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${org.codehaus.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${fasterxml.jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${fasterxml.jackson.version}</version>
+			<!-- <exclusions> <exclusion> <artifactId>jackson-annotations</artifactId> 
+				<groupId>com.fasterxml.jackson.core</groupId> </exclusion> </exclusions> -->
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-hibernate4</artifactId>
+			<version>${fasterxml.jackson.version}</version>
+		</dependency>
+
+
+		<!-- aspectj相关jar包 -->
+ 		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2.2</version>
+		</dependency> 
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.7.3</version>
+		</dependency>
+
+		<!--数据库开始 -->
+		<!--连接池开始 -->
+		<!-- c3po -->
+<!-- 		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>mchange-commons-java</artifactId>
+			<version>0.2.6.3</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>7.0.61</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!--连接池结束 -->
+		<!-- 驱动开始 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- 驱动结束 -->
+		<!--数据库结束 -->
+
+		<!-- servlet包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+  			<groupId>javax.servlet.jsp</groupId>
+  			<artifactId>jsp-api</artifactId>
+  			<version>2.2</version>
+  			<scope>provided</scope>
+		</dependency>
+		<!-- jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty.aggregate</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>${jetty.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-jsp</artifactId>
+			<version>${jetty.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- 缓存 -->
+		<dependency>
+		  <groupId>net.sf.ehcache</groupId>
+		  <artifactId>ehcache-core</artifactId>
+		  <version>2.6.9</version>
+		</dependency>
+		<dependency>
+ 			 <groupId>net.sf.ehcache</groupId>
+  			<artifactId>ehcache-web</artifactId>
+  			<version>2.0.4</version>
+		</dependency>
+
+
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>utf8</encoding>
+				</configuration>
+			</plugin>
+			<!-- 解决maven test命令时console出现中文乱码乱码 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<!-- <systemProperties> -->
+					<!-- <property> -->
+					<!-- <name>net.sourceforge.cobertura.datafile</name> -->
+					<!-- <value>target/cobertura/cobertura.ser</value> -->
+					<!-- </property> -->
+					<!-- </systemProperties> -->
+				</configuration>
+			</plugin>
+
+			<!-- js css 打包压缩 :运行 mvn install 命令会把压缩后的文件输出到target/项目/，但是war包里面没有保存，需要手动把压缩后的文件复制到包里 -->
+			<plugin>
+				<!-- YUI Compressor Maven压缩插件 -->
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>yuicompressor-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>compress</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<jswarn>false</jswarn>
+					<excludes>
+						<exclude>**/*.min.js</exclude>
+						<exclude>**/*.min.css</exclude>
+					</excludes>
+					<!-- <force>false</force> -->
+					<!-- 不使用后缀 -->
+					<nosuffix>true</nosuffix>
+					<!-- 把文件压缩成一行 -->
+					<linebreakpos>-1</linebreakpos>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<warSourceExcludes>**/html/**</warSourceExcludes>
+					
+					 <warName>${project.build.finalName}-${profiles.activation}</warName>  
+                    <!-- 激活spring profile -->  
+                    <webResources>  
+                        <resource>  
+                            <filtering>true</filtering>  
+                            <directory>src/main/profile</directory>  
+                            <!--打包的时候读取 src/main/profile/web.xml 替换 src/main/webapp/WEB-INF/web.xml 
+                              	这样调试和打包都不冲突
+                            -->
+                            <targetPath>WEB-INF</targetPath>  
+                            <includes>  
+                                <include>**/web.xml</include>  
+                            </includes>  
+                        </resource>  
+                    </webResources>  
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>  
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>  
+                    
+				</configuration>
+			</plugin>
+
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>sonar-maven-plugin</artifactId> 
+				<version>2.6</version> </plugin> -->
+
+		</plugins>
+	</build>
+
+	<profiles>
+
+		<profile>
+            <id>production</id>
+            <activation>
+            	<!-- 打包默认是production环境,要打包成为functional_test环境，需要在maven打包命令后加参数 -P functional_test -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profiles.activation>production</profiles.activation>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>tomcat-maven-plugin</artifactId>
+                        <version>1.1</version>
+                        <configuration>
+                            <!-- 配置项目自动发布服务器 -->
+<!--                             <url>http://xx.xx.xx.xx:8080/manager/text</url>
+                            <path>/xmj-manager</path>
+                            <server>Tomcat</server> -->
+                           <!--  <warFile>target/${profiles.activation}.war</warFile> -->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>functional_test</id>
+            <properties>
+                <profiles.activation>functional_test</profiles.activation>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>tomcat-maven-plugin</artifactId>
+                        <version>1.1</version>
+                        <configuration>
+                            <!-- 配置项目自动发布服务器 -->
+<!--                             <url>http://xx2.xx.xx.xx:8080/manager/text</url>
+                            <path>/xmj-manager</path>
+                            <server>Tomcat</server> -->
+                         <!--    <warFile>target/${profiles.activation}.war</warFile> -->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+		<!--命令 mvn sonar:sonar,必须指定在jdk 1.7环境下使用 -->
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.projectKey>workPlatform</sonar.projectKey>
+				<sonar.projectName>workPlatform</sonar.projectName>
+				<sonar.projectVersion>V2.1.0.008</sonar.projectVersion>
+				<sonar.sources>./src/main/java,./src/main/webapp/WEB-INF/resource/jsp,./src/main/webapp/static/css,./src/main/webapp/static/script</sonar.sources>
+				<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+				<sonar.tests>./src/test/java</sonar.tests>
+				<sonar.jdbc.url>jdbc:mysql://192.168.222.152:3306/sonar?useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true&amp;useConfigs=maxPerformance</sonar.jdbc.url>
+				<sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+				<sonar.jdbc.username>sonar</sonar.jdbc.username>
+				<sonar.jdbc.password>sonar</sonar.jdbc.password>
+				<sonar.host.url>http://192.168.222.156:9000/sonar</sonar.host.url>
+			</properties>
+		</profile>
+
+	</profiles>
+
+	<!-- <reporting> <plugins> pmd:pmd 推荐使用 <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-pmd-plugin</artifactId> <version>3.4</version> <configuration> 
+		<format>format</format> <targetJdk>1.6</targetJdk> </configuration> </plugin> 
+		</plugins> </reporting> -->
+</project>

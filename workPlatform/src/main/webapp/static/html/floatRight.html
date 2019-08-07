@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../css/font-icon.css">
+<link href="../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+	<div class="logo pull-left"></div>
+    <div class="main-menue pull-left corner-6 project-select">
+    	<i class="icon-inbox"></i><a>project name<i class=" icon-down-open-big"></i></a>
+    </div>
+
+    <div class="right-function  pull-right">
+    	<ul>
+        	<li><a href="#" class="add"><i class=" icon-plus"></i>新建</a></li>
+            <li><a href="#"><img src="../images/head-portraits.png" />moonstar<i class="icon-down-dir"></i></a></li>
+        </ul>
+    	
+        
+    </div>
+</div>
+    <!--右边浮出层 -->
+	<div class="layer-right  boardBackground clear-radius">
+       	
+     <div class="panel-content  vertical-scroll">
+     	<div class="layer-top task-infor ">
+        	<h5>任务名称 <span>asqwwe</span>任务阶段<span>dqwed</span></h5>
+            <a>更多<i class=" icon-down-open-big"></i></a>
+        </div>
+    	<div class="task-infor task-content">
+          <div class="block">
+              <span class="check-box pull-left"><i class="icon-ok"></i></span>
+              <textarea class="form-control">ssssssssssssssssss</textarea>
+          </div>
+          <div class="add-message">
+          	 <a><i class="icon-plus-circle"></i>添加备忘</a>
+          </div>
+      </div>
+   	  <div class="task-infor task-detail little-portrait">
+        <ul>
+            <li><label>执行者</label><br /><a><img src="../images/head-pic.jpg" class="img-circle"> moonstar</a></li>
+            <li><label>截止日期</label><br /><a><i class="icon-calendar"></i>选择截止日期</a></li>
+            <li><label>优先级</label>
+            <div class="layer-group open-layer">
+            <a><i class=" icon-record gray"></i>一般</a>
+                <ul class="add-message boardBackground inerLayer space-item  floatLayer" >
+                   <li><a><i class=" icon-record gray"></i>一般</a> <i class=" icon-ok"></i>  </li>
+                   <li><a><i class=" icon-record yellow"></i>紧急 </a></li>
+                   <li><a><i class=" icon-record red"></i>非常紧急</a>  </li>
+                </ul>
+            </div>
+            
+        </ul>
+      </div>
+      <div class="task-infor add-message">
+          <a><i class="icon-plus-circle"></i>添加检查项</a>
+           <ul class="check-item">
+           	  <li><span class="check-box"><i class="icon-ok"></i></span> aaaaa</li>
+              <li><span class="check-box"><i class="icon-ok"></i></span> aaaaa</li>
+           </ul>
+           <textarea  placeholder="添加检查项" class="form-control">
+</textarea>
+       <div class="button-area">
+       	  <button class="btn  btn-cancel "> 取消 </button>
+          <button class="btn btn-sure"> 确定 </button>
+       </div>
+      </div>
+       <div class="task-infor add-message  newInfor">
+          <a><i class="icon-plus-circle"></i>添加子任务</a>
+          	<ul class="filetree">
+		<li><span class="folder">Folder 1</span>
+			<ul>
+				<li><span class="file">Item 1.1</span></li>
+			</ul>
+		</li>
+		<li><span class="folder">Folder 2</span>
+			<ul>
+				<li><span class="folder">Subfolder 2.1</span>
+					<ul id="folder21">
+						<li><span class="file">File 2.1.1</span></li>
+						<li><span class="file">File 2.1.2</span></li>
+					</ul>
+				</li>
+				<li><span class="file">File 2.2</span></li>
+			</ul>
+		</li>
+		<li class="closed"><span class="folder">Folder 3 (closed at start)</span>
+			<ul>
+				<li><span class="file">File 3.1</span></li>
+			</ul>
+		</li>
+		<li><span class="file">File 4</span></li>
+	</ul>
+          <div class="task">
+          	<div class="block add-task" >
+                	<textarea class="task-content-input form-control"  rows="2" placeholder="任务内容"></textarea>
+                    <div class="task-infor"> <a><img src="../images/head-pic.jpg" class="img-circle"> moonstar</a></div>                  
+                    <div class="task-infor add-message">
+                         <label>参与者</label><br>
+                          <ul>
+                            <li><img src="../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                            <li><img src="../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+                            <li><i class="icon-plus-circle icon-big"></i></li>
+                         </ul>
+                    </div>
+                    <button class="btn btn-sure">新建</button>   
+                     <div class="layer-group  open-layer">
+                        <ul class="add-message boardBackground inerLayer floatLayer">
+                            <li><a>所有成员可见</a><i class=" icon-ok"></i></li>
+                            <li><a>仅参与者可见</a></li>
+                        </ul>    
+                         <button class="btn gray">所有成员可见 <i class="icon-up-open-big"></i></button>                         
+                    </div>   
+                </div>
+          </div>
+          
+      </div>
+      <div class="task-infor add-message little-portrait">
+         <label>参与者</label><br />
+         <ul>
+         	<li><img src="../images/head-pic.jpg" class="img-circle"><a class="remove-member-handler">×</a></li>
+            <li><i class="icon-plus-circle icon-big"></i></li>
+         </ul>
+         
+      </div>
+      <div class="task-infor task-activity-tab">
+      		<ul class="nav nav-tabs nav-justified">
+               <li ><a href="#">动态 （8）</a></li>
+               <li class="active"><a href="#">附件</a></li>
+            </ul>
+            <div class=" activity-detail little-portrait" style="display:block">
+            	<ul>
+                	<li><p class="user"><img src="../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>完成了任务</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>完成了任务</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>完成了任务</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>完成了任务</p><time>12月24日 16:00</time></li>
+
+                </ul>
+            </div>
+            <div class="tab-accessory  little-portrait">
+            	<h5>
+                	<a> <i class="icon-attach-2"></i>添加附件 </a><span>或把文件拖到这里</span>
+                </h5>    	
+                <ul>
+                   <li>
+                   		<img src="../images/head-pic.jpg" class="img-circle"><a>moonstar </a> <time class="pull-right">周一 下午3:52</time>
+                        <ul class="accessory-area">
+                            <li>
+                                <span><a><i class=" icon-mic-1"></i> report.mp3 <span>(0.3K)</span> </a> <i class="icon-cancel-circled" title="删除"></i></span> 
+                                <span><a><i class=" icon-picture"></i> report.pic <span>(0.8K)</span></a><i class="icon-cancel-circled" title="删除"></i></span>
+                                <span><a><i class=" icon-picture"></i> aa.pic <span>(0.8K)</span></a><i class="icon-cancel-circled" title="删除"></i></span>
+                            </li>
+                        </ul>
+                   
+                   </li>
+                   <li>
+                   		<img src="../images/head-pic.jpg" class="img-circle"><a>moonstar </a> <time class="pull-right">周一 下午3:52</time>
+                        <ul class="accessory-area">
+                            <li>
+                                <span><a><i class=" icon-mic-1"></i> report.mp3 <span>(0.3K)</span> </a> <i class="icon-cancel-circled" title="删除"></i></span> 
+                                <span><a><i class=" icon-picture"></i> report.pic <span>(0.8K)</span></a><i class="icon-cancel-circled" title="删除"></i></span>
+                            </li>
+                        </ul>
+                   
+                   </li>
+                </ul>
+            </div>
+            
+      </div>
+     </div>
+     <div class="comment">
+     	<div class="flex-text-wrap">
+            <textarea  placeholder="说点什么(按Ctrl + 回车键提交)" class="form-control">
+</textarea>
+
+        </div>
+          <div class="comment-handler">
+            <a  > <i class="icon-attach-2"></i>添加附件 </a>
+            <button class="btn btn-sure "> 回复 </button>
+          </div>
+     </div>
+
+     
+    </div>
+</body>
+</html>

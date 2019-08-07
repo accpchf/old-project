@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+<link href="../../plugins/jquery-ui/jquery-ui-1.10.4.css" rel="stylesheet" type="text/css" />
+<style>
+      .portlet-placeholder {
+        border: 1px dotted black;
+        margin: 0 1em 1em 0;
+        height: 50px;
+      }
+      .moneySilder{
+        display:inline-block;
+        margin:0px 0 0 15px;
+        padding-top:7px;
+      }
+     .taskSilder{
+        display:inline-block;
+        margin:20px 0 0 15px;
+        padding-top:7px;
+     }
+     .taskDoneList {opacity: .6;
+        filter: alpha(opacity=60);
+        text-decoration: line-through;
+     }
+     .block .priority a.select {
+        background-color: #fff;
+        border: 1px solid #53bc00;
+      }
+      .taskList{padding-bottom: 20px;}
+    </style>
+</head>
+<body class="project vertical-scroll">
+<div class="main-content">
+	
+    	 <div class="project-chart">
+         	<div class="chart-wrap" style="display:block">
+            	<div class="block">
+            <h2>倒计时</h2>
+			<div id="myStathalf2" data-dimension="250" data-text="35" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-icon="fa-task" style="margin-left:30px"></div>
+
+        </div>
+        <div class="block user"  >
+        	 <h2>团队人数</h2>
+        </div>
+        <div class="block" >
+        	 <h2>项目进度</h2>
+        </div>
+        <div class="block">
+        	 <h2>风险指数</h2>
+        </div>
+        <div class="block">
+        	<h2>预算使用</h2>
+           
+        </div>
+            </div>
+    	
+        <div class="stretch">
+        	<div class="task-select pull-left"><a><i class="icon-left-dir"></i>紧急任务</a><i class="icon-down-open-big"></i></div>
+        	<div class="arrow">
+               <i id="upOrDown" class="Stretch_arrow up_arrow"></i>
+               <span>收起图表</span>
+            </div>
+        </div>
+    </div>
+    <div class="main-task">
+        <ul class="task horizontal-scroll">
+        	
+            <li class="vertical-scroll">
+            	<div class="top">
+                	<h4 class="pull-left">进行中</h4>
+                    <a href="#" class="pull-right"><i class="icon-down-open-big"></i></a>
+                </div>
+                <div class="taskAccordion">
+                <h3>未完成的任务<span color>6</span></h3>
+                    <div class="taskList">
+                        <div class="block">
+                            <div class="border-red"></div>
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >Twitter Bootstrap - Bootstrap 可以在该站点上找到所有可用和下载。</div>
+                        </div>
+                        <div class="block">
+                            <div class="border-yellow"></div>
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >只要您具备 HTML 和 CSS 的基础</div>
+                        </div>
+                        <div class="add-button corner-6">
+                            <a href="#"><i class=" icon-plus-circled"></i>新建任务</a>
+                        </div>
+                    </div>
+                    <h3>已完成的任务</h3>
+                    <div class="taskDoneList">
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                         <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                    </div>
+                
+                </div>
+            </li>
+             <li class="vertical-scroll">
+                <div class="top">
+                    <h4 class="pull-left">进行中</h4>
+                    <a href="#" class="pull-right"><i class="icon-down-open-big"></i></a>
+                </div>
+                <div class="taskAccordion">
+                    <h3>未完成的任务</h3>
+                    <div class="taskList">
+                        <div class="block">
+                            <div class="border-red"></div>
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >Twitter Bootstrap - Bootstrap 可以在该站点上找到所有可用和下载。</div>
+                        </div>
+                        <div class="block">
+                            <div class="border-yellow"></div>
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >只要您具备 HTML 和 CSS 的基础</div>
+                        </div>
+                        <div class="add-button corner-6">
+                            <a href="#"><i class=" icon-plus-circled"></i>新建任务</a>
+                        </div>
+                    </div>
+                    <h3>已完成的任务</h3>
+                    <div class="taskDoneList">
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                         <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                    </div>
+                
+                </div>
+            </li>
+            <li class="vertical-scroll">
+                <div class="top">
+                    <h4 class="pull-left">进行中</h4>
+                    <a href="#" class="pull-right"><i class="icon-down-open-big"></i></a>
+                </div>
+                <div class="taskAccordion">
+                    <h3>未完成的任务</h3>
+                    <div class="taskList">
+                        <div class="block">
+                            <div class="border-red"></div>
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >Twitter Bootstrap - Bootstrap 可以在该站点上找到所有可用和下载。</div>
+                        </div>
+                        <div class="block">
+                            <div class="border-yellow"></div>
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >只要您具备 HTML 和 CSS 的基础</div>
+                        </div>
+                        <div class="add-button corner-6">
+                            <a href="#"><i class=" icon-plus-circled"></i>新建任务</a>
+                        </div>
+                    </div>
+                    <h3>已完成的任务</h3>
+                    <div class="taskDoneList">
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                         <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                    </div>
+                
+                </div>
+            </li>
+             <li class="vertical-scroll">
+                <div class="top">
+                    <h4 class="pull-left">进行中</h4>
+                    <a href="#" class="pull-right"><i class="icon-down-open-big"></i></a>
+                </div>
+                <div class="taskAccordion">
+                    <h3>未完成的任务</h3>
+                    <div class="taskList">
+                        <div class="block">
+                            <div class="border-red"></div>
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >Twitter Bootstrap - Bootstrap 可以在该站点上找到所有可用和下载。</div>
+                        </div>
+                        <div class="block">
+                            <div class="border-yellow"></div>
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok"></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >只要您具备 HTML 和 CSS 的基础</div>
+                        </div>
+                        <div class="add-button corner-6">
+                            <a href="#"><i class=" icon-plus-circled"></i>新建任务</a>
+                        </div>
+                    </div>
+                    <h3>已完成的任务</h3>
+                    <div class="taskDoneList">
+                        <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                         <div class="block">
+                            <span class="check-box pull-left"><i class="icon-ok "  ></i></span><a href="#" class="pull-left person-space"><img src="../../images/head-pic.jpg" class="img-circle"/></a><div class="word" >ssssssssssss</div>
+                        </div>
+                    </div>
+                
+                </div>
+            </li>
+
+        </ul>
+
+    	
+    </div>
+
+    
+    
+    
+</div>
+<script type="text/javaScript" src="../../script/taskBoard/taskBoard.js"></script>
+</body>
+</html>

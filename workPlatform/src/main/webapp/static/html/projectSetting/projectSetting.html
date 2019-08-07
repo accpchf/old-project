@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>项目设置</h4>
+        <a class="person-header img-alter"><img src="../../images/pic-project2.jpg" class="img-circle img120" /><span class="boardBackground"><i class="icon-pencil-1"></i></span></a>
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+       <li ><a href="#">项目信息</a></li>
+       <li class="active"><a href="#">成员管理</a></li>
+       <li><a href="#">高级设置</a></li>
+    </ul>
+    <div class="scroll-area vertical-scroll">
+   	 <div class="row add-member">
+    <div class="col-xs-6">
+        <h5>
+            通过邮箱添加新成员
+        </h5>
+            <input class="form-control" type="text"
+            placeholder="输入邮箱 回车确认" >
+
+    </div>
+    <div class="col-xs-6">
+        <h5>
+            通过链接添加新成员<a>关闭链接</a>	
+        </h5>
+             <p style="display:none">把链接通过QQ、微信、邮件组等方式分享给团队成员，他们即可点击链接直接加入当前团队。</p>
+             <input id="linksInvite" class="form-control user" placeholder="" type="text" value="http://xxxxxx" style="display:block">
+  				
+    </div>
+
+</div>
+   	 <div class="member-nav">
+    <a>项目成员列表</a><a  class="select">导入组织成员</a><a>推荐成员</a>
+</div>
+   	 <div class="teams-list  team-common">
+
+    <ul>
+        <li class="none-border">团队</li>
+        <li class="little-portrait"><h4>所有成员</h4><em><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /></em><button class="btn pull-right outer-borer">导入</button> </li>
+                <li class="little-portrait"><h4>团队 3.5</h4><em><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /><img src="../../images/head-pic.jpg" class="img-circle" /></em> <span class="  pull-right  ">已导入</span> </li>
+        <li class="none-border">成员</li>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar </a><button class="btn pull-right outer-borer">加入项目</button> </li>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar </a><button class="btn pull-right outer-borer">加入项目</button> </li>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar </a><span class="  pull-right  ">已加入项目</span> </li>
+    </ul>
+</div>
+    </div>
+</div>
+<br />
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>项目设置</h4>
+        <img src="../../images/pic-project2.jpg" class="img-circle"/>
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+       <li class="active"><a href="#">项目信息</a></li>
+       <li ><a href="#">成员管理</a></li>
+       <li><a href="#">高级设置</a></li>
+    </ul>
+     <div class="row add-member">
+    <div class="col-xs-6">
+        <h5>
+            通过邮箱添加新成员
+        </h5>
+            <input class="form-control" type="text"
+            placeholder="输入邮箱 回车确认" >
+
+    </div>
+    <div class="col-xs-6">
+        <h5>
+            通过链接添加新成员<a>关闭链接</a>	
+        </h5>
+             <p style="display:none">把链接通过QQ、微信、邮件组等方式分享给团队成员，他们即可点击链接直接加入当前团队。</p>
+             <input id="linksInvite" class="form-control user" placeholder="" type="text" value="http://xxxxxx" style="display:block">
+  				
+    </div>
+
+</div>
+<div class="member-nav">
+    <a class="select">项目成员列表</a><a>推荐成员</a>
+</div>
+<div class="teams-list">
+    <div class="team-number team-common  little-portrait corner-3">
+        <i class="icon-trash-empty"></i>
+    	<h4>团队 2.5</h4>
+        <img src="../../images/head-pic.jpg" class="img-circle">
+        <img src="../../images/head-pic.jpg" class="img-circle">
+
+
+    </div>
+    <ul>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar <span>拥有者</span></a></li>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar <span>拥有者</span></a>
+        <button class="btn pull-right red-outline outer-borer-red">移除成员</button><span class="pull-right radio-circle"><i class="icon-record-outline"></i>设为成员</span><span class="pull-right radio-circle select"><i class=" icon-dot-circled "></i>设为监督员</span><span class="pull-right radio-circle"><i class=" icon-record-outline"></i>设为管理员</span></li>
+    </ul>
+</div>
+</div>
+<br />
+
+
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>项目设置</h4>
+        <img src="../../images/pic-project2.jpg" class="img-circle"/>
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+       <li ><a href="#">项目信息</a></li>
+       <li class="active"><a href="#">成员管理</a></li>
+       <li><a href="#">高级设置</a></li>
+    </ul>
+     <div class="row add-member">
+    <div class="col-xs-6">
+        <h5>
+            通过邮箱添加新成员
+        </h5>
+            <input class="form-control" type="text"
+            placeholder="输入邮箱 回车确认" >
+
+    </div>
+    <div class="col-xs-6">
+        <h5>
+            通过链接添加新成员
+        </h5>
+            <input class="form-control" value="http://dd.cc" >
+    </div>
+
+</div>
+<div class="member-nav">
+    <a >项目成员列表</a><a class="select">推荐成员</a>
+</div>
+<div class="teams-list">
+    <ul>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar</a> <button class="btn pull-right outer-borer">加入项目</button></li>
+        <li><img src="../../images/head-pic.jpg" class="img-circle" /> <a>moonstar </a> <button class="btn pull-right outer-borer">加入项目</button></li>
+    </ul>
+</div>
+</div>
+<br />
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>项目设置</h4>
+        <img src="../../images/pic-project2.jpg" class="img-circle"/>
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+       <li ><a href="#">项目信息</a></li>
+       <li><a href="#">成员管理</a></li>
+       <li  class="active"><a href="#">高级设置</a></li>
+    </ul>
+    <div class="advanced-settings">
+    	<p>一旦你退出了该项目，你将不能查看任何关于该项目的信息。退出项目后，如果想重新加入，请联系项目的拥有者或者管理员。</p>
+   		<button class="btn red btn-common">退出项目</button>
+    </div>
+
+
+
+</div>
+<br />
+
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>项目设置</h4>
+        <img src="../../images/pic-project2.jpg" class="img-circle"/>
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+    <ul class="nav nav-tabs nav-justified">
+       <li class="active"><a href="#">项目信息</a></li>
+       <li><a href="#">成员管理</a></li>
+       <li><a href="#">高级设置</a></li>
+    </ul>
+    <ul>
+        <li><label>项目名称 ( <span class="green"> 进行中 </span> )</label><input class=" form-control" type="text" data-type="name"  value="浙江大学"></li>
+        <li><label>项目类别</label><select class=" form-control"  data-type="name"  ><option value="design"> 设计组织 </option></select></li>
+        <li><label>项目简介</label><textarea class=" form-control" type="text" >昆山创新中心</textarea></li>
+        <li>
+        	<label>项目日志</label>
+             <div class=" activity-detail little-portrait log-list corner-6">
+            	<ul>
+                	<li><p class="user"><img src="../../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>将项目状态改为暂停</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>将项目状态改为暂停</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>将项目状态改为暂停</p><time>12月24日 16:00</time></li>
+                    <li><p class="user"><img src="../../images/head-pic.jpg" class=" img-circle"><span>moonstar</span>将项目状态改为暂停</p><time>12月24日 16:00</time></li>
+                </ul>
+             </div>
+        
+        </li>
+            
+        <button class="btn green btn-common">确定</button>
+    </ul>
+</div>
+	
+
+</body>
+</html>

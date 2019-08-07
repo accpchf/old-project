@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>  
+<link href="../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../css/font-icon.css">
+<link href="../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+	<div class="logo pull-left"></div>
+    <div class="main-menue pull-left corner-6 project-select">
+    	<i class="icon-inbox"></i><a>project name<i class=" icon-down-open-big"></i></a>
+    </div>
+
+    <div class="right-function  pull-right">
+    	<ul>
+        	<li><a href="#" class="add"><i class=" icon-plus"></i>新建</a></li>
+            <li><a href="#"><img src="../images/head-portraits.png" />moonstar<i class="icon-down-dir"></i></a></li>
+        </ul>
+    	
+        
+    </div>
+</div>
+    <!--右边浮出层 -->
+	<div class="layer-left  boardBackground clear-radius">
+    	<div class="layer-top task-infor ">
+        	<h5>任务分组</h5>
+            <a><i class="icon-plus-circle"></i>任务分组</a>
+        </div>
+        <ul>
+        	<li>
+               <input class=" form-control" type="text" placeholder="任务分组名称">
+               <textarea class="form-control"  placeholder="任务分组描述"></textarea>
+           	   <button class="btn green btn-common">新建</button>
+            </li>
+
+        </ul>
+        <ul>
+            <li><a>主要的任务</a><span>sssssssssss</span></li>
+        </ul>
+        <div class="layer-top task-infor ">
+            <h5>智能分组</h5>
+        </div>
+       	<ul>
+            <li><a>今天的任务</a><span class="pull-right"><i class=" icon-pencil"></i><i class="icon-trash"></i></span></li>
+            <li><a>未完成的任务</a><span class="pull-right"><i class=" icon-pencil"></i><i class="icon-trash"></i></span></li>
+            <li><a>已完成的任务</a></li>
+            <li><a>成员的任务 <i class="icon-down-dir"></i></a></li>
+        </ul>
+    </div>
+</body>
+</html>

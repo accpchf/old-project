@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+
+<div class="windows-popup boardBackground form-setting ">
+    <div class="img-block">
+        <h4>创建项目</h4>
+        <div class="project-type">
+        	<img src="../../images/pic-project2.jpg" class="img-circle pull-left"/>
+            <div class="project-type-right">
+            	<img src="../../images/pic-project2.jpg" class="img-circle select"/>
+                <img src="../../images/pic-project.jpg" class="img-circle"/>
+                <img src="../../images/pic-project3.jpg" class="img-circle"/>
+                <img src="../../images/pic-project4.jpg" class=" img-circle"/>
+                <img src="../../images/pic-project5.jpg" class=" img-circle"/>
+                <i class="icon-plus-circle"  title="添加新主题"></i>
+            </div>
+        </div>
+
+        <i class="icon-cancel-circled shut"></i>
+    </div>
+
+    <ul>
+        <li><label>项目名称</label><input class=" form-control" type="text" placeholder="项目名称" ></li>
+        <li class="team-cycle"><label  >项目周期</label><input class=" form-control " type="text" placeholder="开始时间"  >~<input class=" form-control" type="text" placeholder="结束时间" ></li>
+        <li ><label>项目简介</label><textarea class=" form-control" type="text"   placeholder="项目简介" > </textarea></li>
+        <button id="ok" class="btn green btn-common">确定</button>
+    </ul>
+</div>
+
+<script>
+    $(function(){
+        $("#ok").on("click",function(){
+            alert("提交")
+        })
+    })
+</script>
+
+</body>
+</html>

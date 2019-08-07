@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>task board</title>
+<link href="../../css/bootstrap.css" type="text/css" rel="stylesheet"/>  
+<link href="../../css/main.css" type="text/css" rel="stylesheet"/> 
+<link rel="stylesheet" type="text/css" href="../../css/font-icon.css">
+<link href="../../css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="project vertical-scroll">
+<div class="header" >
+	<div class="logo pull-left"></div>
+
+    <div class="right-function  pull-right">
+    	<ul>
+            <li><a href="../login/register.html"><i class="icon-key"></i>注册</a></li>
+        </ul>
+    	
+        
+    </div>
+</div>
+<div class="popup-content-wrapper">
+	<div class="popup-content registerSucess" >
+       <i class="icon-warning"></i>
+       <p>重置邮箱地址已经过期，请检查您的邮箱或者重新设置</p>
+	</div>
+
+
+</div>
+
+<script src="../../plugins/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">  
+    $("#login").on("click",function(){
+        location.href="../index/index.html";
+        return false;
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,570 @@
+
+.task_chat {
+	position:absolute;
+	top:100px;
+	left:300px;
+	z-index:100000;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.2);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.2);
+	
+	
+}
+.task_chat .chat_mini {
+	display:none;
+	width:202px;
+	height:36px;
+	background-color:#f3f8fa;
+	border:1px solid #d5dde1;
+	cursor:pointer;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+.task_chat .hasTips {
+	background-color:#59C862;
+	border:1px solid
+        #42B349;
+}
+
+.task_chat .chat_mini h3 {
+	color:#656565;
+	font-size:14px;
+	margin:8px
+}
+
+.task_chat .chat_mini  i{ font-size:16px;color:#53bc00}
+.task_chat .chat_mini  span .num{ color:#53bc00; font-weight:bold}
+.task_chat .chat_box {
+	display:none;
+	height:496px;
+	border:1px solid #d5dde1;
+}
+.task_chat .chat_header {
+	height:44px;
+	width:100%;
+	background-color:#f3f8fa;
+	border-bottom:1px solid #d5dde1;
+}
+
+ 
+.task_chat .friends_list_wrap,.task_chat
+        .chat_content {
+	float:left;
+}
+.task_chat .friends_list_wrap {
+	width:135px;
+	height:450px;
+	background-color:#f3f8fa;
+	border-right:1px solid #d5dde1;
+}
+.task_chat .chat_content {
+	height:450px;
+	width:480px;
+}
+.task_chat .chat_content h6{ text-align:center; margin:10px 0 0}
+/*chat header部分*/ .task_chat .chat_box .min_icon,.task_chat .chat_box
+        .close_icon {
+	display:inline-block;
+	width:16px;
+	height:16px;
+}
+.task_chat .chat_header .icon {
+	float:right;
+	height:24px;
+	line-height:24px;
+	margin-right:12px;
+	margin-top:12px;
+
+}
+.task_chat .chat_header .icon a{ font-size:18px;}
+.task_chat .chat_header .icon a:hover{ background-color:#e7edef;}
+
+
+
+.task_chat .chat_header .titles {
+	float:left;
+	height:44px;
+	line-height:44px;
+	color:#343434;
+}
+.task_chat .chat_header
+        .titles img {
+	width: 35px;
+height: 35px;
+margin-left: 8px;
+margin-top: -4px;
+}
+.task_chat .chat_header .titles span {
+	margin-left:8px;
+	font-size:14px;
+}
+.task_chat .chat_box .min_icon {
+	background-position:-1px 3px;
+	margin-right:2px;
+}
+.task_chat .chat_box .min_icon:hover {
+	background-position:-1px -18px;
+	background-color:#ebebeb;
+}
+.task_chat
+        .chat_box .close_icon {
+	background-position:-22px 3px;
+}
+.task_chat
+        .chat_box .close_icon:hover {
+	background-position:-22px -18px;
+	background-color:#ebebeb;
+}
+/*好友列表部分*/ .task_chat .friends_list {
+	max-height:334px;
+	overflow:hidden;
+	margin-top:4px;
+}
+.task_chat .friends_list:hover {
+	overflow-y:auto;
+}
+.task_chat .friends_list::-webkit-scrollbar {
+	border-radius:16px;
+	padding-right:8px;
+	width:8px;
+}
+.task_chat .friends_list::-webkit-scrollbar-thumb {
+	background-color:#ccc;
+	border-radius:16px;
+}
+.task_chat .friends_list
+        .current{
+	border-top:1px solid #d5dde1;
+	border-bottom:1px solid #d5dde1;
+	background-color:#f8fdff;
+}
+.task_chat .friends_tab {
+	display:inline-block;
+	width:100%;
+	cursor:pointer;
+	font-size:12px;
+	background-position:-4px
+        -89px;
+	margin-top:12px;
+	padding-left:3px;
+}
+
+.task_chat .friends_tab i{ font-size:14px;}
+
+.task_chat .tab_current {
+	background-position:-4px -62px;
+}
+.task_chat .friends-item {
+	position:relative;
+	overflow:hidden;
+	white-space:nowrap;
+	padding-left:9px;
+	color:#999;
+	font-size:12px;
+	height:29px;
+	cursor:pointer;
+}
+.task_chat .friends-item  i{position: absolute;
+font-size: 18px;
+top: 4px;
+right: 0;}
+.task_chat .friends-item  i:hover{color:#ff2500}
+.task_chat .friends-item a {
+	float:left;
+}
+.task_chat .friends-item img {
+	border-radius:9px;
+	margin-top:-4px;
+}
+.task_chat .friends-item .img {
+	padding-top:8px;
+}
+.task_chat .friends-item .img img{width:20px; height:20px;}
+.task_chat
+        .friends-item .item-title {
+	display:inline-block;
+	max-width:60px;
+	overflow:hidden;
+	padding-left:3px;
+	padding-top:6px;
+}
+.task_chat i.icon-users-1{ font-size:10px; padding:0 1px 0 3px}
+.task_chat .friends-item
+        .item-close {
+	display:none;
+	width:16px;
+	height:12px;
+	background-position:2px -42px;
+	padding-top:7px;
+}
+.task_chat .friends-item .item-close:hover {
+	background-position:-18px -42px;
+}
+.task_chat .friends-item .num {
+	display:inline-block;
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:7px;
+	line-height:14px;
+	left:61px;
+	text-align:center;
+	color:white;
+}
+.task_chat
+        .friends-item .num span {
+	background-color:red;
+	display:inline-block;
+	width:14px;
+	height:14px;
+	border-radius:9px;
+}
+/*聊天内容样式*/ 
+.task_chat .chat_content {
+	font-family:'Microsoft YaHei';
+	font-size:12px;
+	background-color:#FFF;
+	position:relative;
+}
+.task_chat
+        .chat_content .list ul {
+	height:310px;
+	overflow-y:auto;
+	border-right-style:none;
+	padding:0 16px;
+}
+.task_chat .chat_content .list ul li {
+	margin-bottom:8px;
+	clear:both;
+}
+.task_chat .chat_content .list
+        .time {
+	color:#d0d0d0;
+}
+.task_chat .chat_content .list .post-content {
+	color:#343434;
+	line-height:18px;
+	padding:9px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	position:relative;
+}
+.task_chat .chat_content
+        .list .post-content p {
+	word-break:break-all;
+	word-wrap:break-word;
+	display:inline-block
+}
+.task_chat .chat_content .list .post-content img {
+	max-width: 150px;
+    max-height: 200px;		
+}
+.task_chat .chat_content .list .post-content .img-file{ background-color:#fff; padding:6px;-webkit-border-radius: 10px;
+border-radius: 10px;padding-bottom:30px;}
+.task_chat .chat_content .list .post-content .img-file  img{width:35px; height:35px; display:inline-block; margin-right:3px;}
+.task_chat .chat_content .list .post-content .img-file  p{font-size:14px}
+.task_chat .chat_content .list .post-content .img-file a{color:#CCCCCC;font-size:12px}
+.task_chat .chat_content .list .post-content .img-file button{ float:right; margin:3px 6px; background-color:#fff; border:1px  solid #53bc00; color:#53bc00}
+.task_chat .chat_content .list ul .left {
+	float:left;
+	margin-right:80px;
+}
+.task_chat .chat_content .list ul .right {
+	float:right;
+	margin-left:80px;
+}
+.task_chat .chat_content .list .left .post-content{
+	background-color:#EDF7E8;
+	border:1px solid #E4F2DD;
+}
+.task_chat .chat_content .list
+        .right .post-content {
+	background-color:#f3f8fa;
+	border:1px solid #F2F2F2;
+}
+.task_chat .chat_content .list .right .time {
+	text-align:right;
+}
+.task_chat .chat_content .post-content span {
+	position:absolute;
+	width:6px;
+	height:10px;
+	top:9px;
+}
+.task_chat .chat_content .list .left
+        .post-content span {
+	background-position:0 -33px;
+	left:-6px;
+}
+.task_chat
+        .chat_content .list .right .post-content span {
+	background-position:-6px
+        -33px;
+	right:-6px;
+}
+.task_chat .chat_content ul::-webkit-scrollbar-thumb {
+	background-color:#fff;
+	border:1px solid #e6e6e6;
+}
+.task_chat .chat_content
+        ul::-webkit-scrollbar {
+	background-color:#f2f2f2;
+	border-left:1px solid
+        #e6e6e6;
+	border-right:1px solid #ebebeb;
+	width:10px;
+}
+.task_chat
+        .chat_content ul::-webkit-scrollbar:hover {
+	background-color:#eaeaea;
+}
+.task_chat .chat_content ul::-webkit-scrollbar-thumb:hover {
+	border:1px solid #dbdbdb;
+}
+/*输入框区域样式*/ .task_chat .send_tantan {
+	height:140px;
+	position:absolute;
+	bottom:0;
+	background-color:#f3f8fa;
+	border:1px solid #d5dde1;
+	border-left:none;
+	width:100%
+}
+.task_chat
+        .text_area textarea {
+	padding:5px;
+	height:60px;
+	border:1px solid #CCC;
+	resize:none;
+	outline:none;
+	overflow-y:auto;
+}
+.task_chat .text_area {
+	padding:6px 10px 11px 10px;
+}
+.task_chat .func_area {
+	margin-top:8px;
+	padding-top:1px;
+}
+.task_chat .func_area a{padding:0 10px 0 0; cursor:pointer; font-size:13px}
+.task_chat .func_area span{ margin-left:3px}
+.task_chat .send_tantan .submit {
+	width:61px;
+	line-height:26px;
+	font-size:14px;
+	color:#FFF;
+    float:right;
+	text-align:center;
+	cursor:pointer;
+	background-color:#53bc00;
+	padding-right:0
+}
+.task_chat .send_tantan a.space{ margin-right:10px; background:#4bcaff}
+.task_chat .send_tantan a.space:hover{ background:#6fd5ff}
+.task_chat .send_tantan .submit:hover {
+	background-color:#6dcc22
+}
+.task_chat .send_tantan .submit:active {
+	background-position:-127px 0;
+}
+/*表情样式*/ .task_chat .face-btn {
+	cursor:pointer;
+	display:inline-block;
+	padding-left:20px;
+	margin-top:2px;
+	float:left;
+	background-position:-293px -70px;
+}
+.task_chat .face-btn:hover {
+	background-position:-293px
+        -87px;
+}
+.task_chat .g-hide {
+	display:none;
+}
+.task_chat .face-con {
+	background: #fff;
+	border: 1px solid rgb(204,204,204);
+	box-shadow: 1px  1px 4px 1px #E4E2DE;
+	max-height: 194px;
+	overflow-y: auto;
+	position: absolute;
+	width:220px;
+	z-index: 1000;
+	bottom:8px;
+	left: 10px;
+
+}
+
+.face-area a{font-size:16px; margin-left:8px;color:#939393; float:left !important}
+.task_chat
+        .angle {
+	bottom:-9px;
+	display:none;
+	left:0;
+	position:absolute;
+}
+.task_chat
+        .face-table {
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:inherit;
+	height:100%;
+	width:100%;
+}
+.task_chat td {
+	background:#fff;
+	border:1px solid #efefef;
+	cursor:pointer;
+	line-height:.7;
+}
+.task_chat .wrapper-td {
+	height:30px;
+	position:relative;
+	width:30px;
+}
+.task_chat .wrapper-td img {
+	left:5px;
+	position:absolute;
+	top:3px;
+	z-index:1;
+}
+.task_chat .wrapper-td img:hover {
+	border:1px solid #53bc00;
+}
+.task_chat .face-con::-webkit-scrollbar {
+	width:10px;
+	border-left:1px solid #e6e6e6;
+	border-right:1px solid #ebebeb;
+	background-color:#f2f2f2;
+}
+.task_chat .face-con::-webkit-scrollbar-thumb {
+	background-color:#fff;
+	border:1px solid #e6e6e6;
+}
+.task_chat .face-con::-webkit-scrollbar:hover {
+	background-color:#eaeaea;
+}
+/*私聊提示*/ .task_chat .tip-wrapper {
+	display:none;
+	left:0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	position:absolute;
+	bottom:109px;
+	width:100%;
+}
+.task_chat
+        .chat_notice {
+	height:24px;
+	line-height:24px;
+	background-color:rgba(255,242,202,.8);
+	color:#d86703;
+	z-index:1;
+	text-align:center;
+}
+
+.task_chat .chat-message{ margin:6px 0 0;padding-right:20px; position:relative}
+.task_chat .chat-message a{ cursor:pointer; float:right;padding-bottom:6px;}
+.task_chat  a:hover,.task_chat  a:hover i{ color:#5bc300;}
+.task_chat
+        .chat_content .list ul .fromseek .post-content {
+	background-color:#f3f8fa;
+}
+.task_chat .more-message{ text-align:center; padding:6px 0 0}
+.task_chat .more-message a{ color:#5bc300; cursor:pointer}
+.task_chat .more-message a:hover{ text-decoration:underline}
+.task_chat .chat_content .list .fromseek .post-content p {
+	color:#777;
+}
+.task_chat .chat_content .list .fromseek .post-content strong {
+	color:#555;
+}
+.task_chat .func_area .sec {
+	position:absolute;
+	bottom:-11px;
+	left:60px;
+	width:171px;
+	overflow:hidden;
+	line-height:22px;
+}
+.task_chat .func_area .sec input,.task_chat .func_area .sec .change,.task_chat .func_area .sec img {
+	float:left;
+	display:inline-block;
+	height:22px;
+	margin-right:2px;
+}
+.task_chat .func_area .sec input {
+	width:60px;
+	font-size:12px;
+	height:18px;
+}
+.task_chat .func_area
+        .change {
+	cursor:pointer;
+	color:#3fb20f;
+}
+.task_chat .func_area .change:hover {
+	text-decoration:underline;
+}
+
+.task_chat .badge {
+	padding: 2px 4px;
+	font-size: 12px;
+	font-weight:normal;
+	background-color:#ffa200;
+}
+.task_chat p{ margin-bottom:0 !important}
+a.word-cancel{font-size:14px; color:#5bc300; margin:3px 0 0 6px; position:relative; top:3px; cursor:pointer}
+
+a.word-cancel:hover{ text-decoration:underline}
+.progress-chat {
+  overflow: hidden;
+  width:160px ;
+  height: 26px;
+  display:inline-block;
+  vertical-align:middle;
+  margin-top:-5px;
+
+}
+
+ .progress-chat  .progress-chat-val {
+  float: right;
+  margin-left: 15px;
+  font: 14px/34px Helvetica, Arial, sans-serif;
+  color: #333;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.progress-chat  .progress-chat-bar {
+  display: block;
+  overflow: hidden;
+  height: 8px !important;
+  margin: 13px 0;
+  background: #b8b8b8;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+   
+}
+
+.progress-chat .progress-chat-in {
+
+  display: block;
+  min-width: 0px;
+  height: 8px;
+  background: #1997e6;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #147cd6, #24c1fc);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #147cd6, #24c1fc);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #147cd6, #24c1fc);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #147cd6, #24c1fc);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
