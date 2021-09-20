@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<properties>
 		<org.springframework.version>3.1.2.RELEASE</org.springframework.version>
-		<org.apache.shiro.version>1.2.2</org.apache.shiro.version>
+		<org.apache.shiro.version>1.8.0</org.apache.shiro.version>
 		<!-- 高版本会影响hibernate 实体映射配置 -->
 		<fasterxml.jackson.version>2.3.2</fasterxml.jackson.version>
 		<org.codehaus.jackson.version>1.9.9</org.codehaus.jackson.version>
